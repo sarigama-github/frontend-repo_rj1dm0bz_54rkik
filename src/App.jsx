@@ -2,6 +2,8 @@ import React from "react";
 import Hero from "./components/Hero";
 import Calculator from "./components/Calculator";
 import FooterInfo from "./components/FooterInfo";
+import Facts from "./components/Facts";
+import FAQ from "./components/FAQ";
 
 function App() {
   return (
@@ -20,7 +22,8 @@ function App() {
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm text-blue-200/80">
             <a href="#calc" className="hover:text-white transition">Kalkulačka</a>
-            <a href="#infos" className="hover:text-white transition">Rady a tipy</a>
+            <a href="#facts" className="hover:text-white transition">Fakty</a>
+            <a href="#faq" className="hover:text-white transition">FAQ</a>
           </nav>
         </div>
       </header>
@@ -28,12 +31,14 @@ function App() {
       <main>
         <Hero />
         <div id="calc"><Calculator /></div>
+        <div id="facts"><Facts /></div>
+        <div id="faq"><FAQ /></div>
         <div id="infos"><FooterInfo /></div>
       </main>
 
       <footer className="border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 py-6 text-xs text-blue-200/70">
-          Edukačný nástroj – výsledky majú informačný charakter a nenahrádzajú odborné poradenstvo.
+          © {new Date().getFullYear()} Edukačný nástroj – výsledky majú informačný charakter a nenahrádzajú odborné poradenstvo. Exporty: PDF / CSV.
         </div>
       </footer>
     </div>
